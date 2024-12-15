@@ -36,30 +36,35 @@ if __name__ == "__main__":
     removed_files = []
     already_webp_files = []
 
+    total_files_processed = 0
+
     for path in args.paths:
         if os.path.isdir(path):
             for filename in os.listdir(path):
                 file_path = os.path.join(path, filename)
                 if os.path.isfile(file_path):
                     convert_to_webp(file_path, args.remove, converted_files, removed_files, already_webp_files)
+                    total_files_processed += 1
         elif os.path.isfile(path):
             convert_to_webp(path, args.remove, converted_files, removed_files, already_webp_files)
+            total_files_processed += 1
         else:
             print(f"Error: '{path}' is not a valid file or directory.\n")
 
+    print(f"{total_files_processed} files processed.")
+
+
     if already_webp_files:
-        print("Files already in WebP format:")
+        print("\nFiles already in WebP format:")
         for file in already_webp_files:
             print(' ', file)
-        print()
 
     if converted_files:
-        print("Converted files:")
+        print("\nConverted files:")
         for file in converted_files:
             print(' ', file)
-        print() 
 
     if args.remove and removed_files:
-        print("Original files removed:")
+        print("\nOriginal files removed:")
         for file in removed_files:
             print(' ', file)
