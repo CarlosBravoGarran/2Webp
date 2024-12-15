@@ -14,7 +14,8 @@ This Python script allows web developers to easily convert images from several c
 To get started, clone this repository to your device:
 
 ```bash
-git clone https://github.com/CarlosBravoGarran/2Webp.git
+git clone https://github.com/CarlosBravoGarran/2Webp.git  # HTTPS
+git clone git@github.com:CarlosBravoGarran/2Webp.git      # SSH
 cd 2webp
 ```
 
