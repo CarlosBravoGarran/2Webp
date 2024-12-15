@@ -60,6 +60,6 @@ if __name__ == "__main__":
         print() 
 
     if args.remove and removed_files:
-        print("Original files that were removed:")
+        print("Original files removed:")
         for file in removed_files:
             print(' ', file)
