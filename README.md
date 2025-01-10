@@ -13,11 +13,14 @@ This Python script allows web developers to easily convert images from several c
 
 To get started, clone this repository to your device:
 
-```bash
-git clone https://github.com/CarlosBravoGarran/2Webp.git  # HTTPS
-git clone git@github.com:CarlosBravoGarran/2Webp.git      # SSH
-cd 2webp
-```
+   ```bash
+   git clone git@github.com:CarlosBravoGarran/2Webp.git      # SSH
+   cd 2webp
+   ```
+   ```bash
+   git clone https://github.com/CarlosBravoGarran/2Webp.git  # HTTPS
+   cd 2webp
+   ```
 
 ## Requirements
 
@@ -25,13 +28,8 @@ To run this script, you need Python and Pillow. The script has been tested with 
 
 ### Installing Pillow in Your Virtual Environment
 
-Before running the script, you need to install the necessary requirements:
-- Create and activate a virtual environment:
-```bash
-python3 -m venv venv
-source venv/bin/activate  # Linux/MacOS
-venv\Scripts\activate     # Windows
-```
+Before running the script, you need to install the necessary requirements in  your virtual enviroment:
+
 - Install dependencies:
 ```bash
 pip install -r requirements.txt
